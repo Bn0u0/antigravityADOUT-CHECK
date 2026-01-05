@@ -80,10 +80,11 @@ try:
                 button_location = None
             
             if button_location:
-                print(f"[{time.strftime('%H:%M:%S')}] 發現目標！位置: {button_location} -> 執行 Alt+Enter")
+                print(f"[{time.strftime('%H:%M:%S')}] 發現目標！位置: {button_location} -> 執行左鍵點擊")
                 
-                # 執行快捷鍵 (右側 Alt)
-                pyautogui.hotkey('altright', 'enter')
+                # 取得中心點並點擊
+                center_x, center_y = pyautogui.center(button_location)
+                pyautogui.click(center_x, center_y)
                 
                 # 暫停 2 秒避免連點
                 time.sleep(2)
