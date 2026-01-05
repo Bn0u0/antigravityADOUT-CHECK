@@ -43,10 +43,25 @@ pyautogui.FAILSAFE = False
 print("=== 自動化監控 V2 (穩定掛機版) ===")
 print("1. 請將滑鼠游標放在視窗內")
 print("2. 按住 'q' 鍵可結束程式")
-print("3. 【注意】請確保螢幕不會自動休眠/關閉，否則無法辨識")
+print("3. 按住 'F2' 鍵可暫停/繼續程式")
+print("4. 【注意】請確保螢幕不會自動休眠/關閉，否則無法辨識")
 
 try:
+    paused = False
     while True:
+        # 暫停/恢復功能
+        if keyboard.is_pressed('f2'):
+            paused = not paused
+            if paused:
+                print(f"\n[{time.strftime('%H:%M:%S')}] >>> 暫停中... (再次按下 F2 繼續)")
+            else:
+                print(f"\n[{time.strftime('%H:%M:%S')}] >>> 恢復執行")
+            time.sleep(0.5)  # 避免按鍵重複觸發
+
+        if paused:
+            time.sleep(0.1)
+            continue
+
         # 安全閥：按 q 退出
         if keyboard.is_pressed('q'):
             print("\n>>> 使用者手動停止 (User Stopped)")
