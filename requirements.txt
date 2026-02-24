@@ -1,4 +1,1 @@
-pynput
-keyboard
-opencv-python
-pillow
+pywinauto
