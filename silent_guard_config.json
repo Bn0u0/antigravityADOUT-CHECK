@@ -1,8 +1,15 @@
 {
     "btn_names": "Run",
-    "last_window": "自動確認插件 - Antigravity - Implementation Plan [PID: 17580]",
+    "last_window": "MT5自動交易 - Antigravity - 預覽 USDJPY_斐波那契0.5量化報告.md [PID: 17580]",
     "auto_scroll": true,
     "btn_names_list": [
-        "Run"
+        "Run",
+        "Allow",
+        "Accept all",
+        "Retyt"
+    ],
+    "scroll_area": "只滾動右半部 (Right Half)",
+    "last_windows": [
+        "MT5自動交易 - Antigravity - Walkthrough [PID: 12776]"
     ]
 }
